@@ -1,0 +1,74 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.aispeech.oyf",
+    "module": "oyf_plugin",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.5",
+      "buildId": "mm6og5ntareudfgg6proed6keq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "oyf_plugin-1.0.1.jar",
+          "url": "oyf_plugin-1.0.1.jar",
+          "size": 1999,
+          "sha512": "1dd9c275157a27666bf0beaa4bcfa282b358ec2a6cc63e069564b5a61cd6e89ee4339ded234d5a27f7b0ea432569aef7652de9de8e17c849536b6723c45adc64",
+          "sha256": "4a508baf108781d39b659f1f7473c0ff8ac844eef682256fa396cf73f5a704ee",
+          "sha1": "ea08a6dea054496378bb168d884ae151c7bc5b43",
+          "md5": "0e5844db97098a089d3d71729e8c78b1"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.4.32"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "oyf_plugin-1.0.1.jar",
+          "url": "oyf_plugin-1.0.1.jar",
+          "size": 1999,
+          "sha512": "1dd9c275157a27666bf0beaa4bcfa282b358ec2a6cc63e069564b5a61cd6e89ee4339ded234d5a27f7b0ea432569aef7652de9de8e17c849536b6723c45adc64",
+          "sha256": "4a508baf108781d39b659f1f7473c0ff8ac844eef682256fa396cf73f5a704ee",
+          "sha1": "ea08a6dea054496378bb168d884ae151c7bc5b43",
+          "md5": "0e5844db97098a089d3d71729e8c78b1"
+        }
+      ]
+    }
+  ]
+}

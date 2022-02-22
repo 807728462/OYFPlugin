@@ -1,0 +1,3 @@
+include ':app'
+include ':oyf_plugin'
+rootProject.name = "OYFPlugin"

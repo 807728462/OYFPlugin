@@ -1,0 +1,1 @@
+D:\code\OYFPlugin\oyf_plugin\build\classes\kotlin\main\com\aispeech\oyf\OYFPlugin.class

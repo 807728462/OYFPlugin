@@ -1,0 +1,56 @@
+apply plugin: 'kotlin'
+apply plugin: 'java-gradle-plugin'
+apply plugin: 'maven-publish'
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // 因为想使用kotlin，所以这里增加kotlin插件
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10-RC"
+    }
+}
+gradlePlugin{
+    plugins{
+        //插件名,每一个插件都可以有
+        buildSrcTestPlugin {
+            // 你的插件id，外部项目引用时需要
+            id = 'com.aispeech.oyf.buildsrc'
+            // 插件的具体实现类
+            implementationClass = 'com.aispeech.oyf.OYFPlugin'
+        }
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.32"
+}
+// 组名，可以理解为插件的存放目录
+// com/petterp/gradle/plugins/xxx
+group = 'com.aispeech.oyf'
+description = '这是一个OYF独立的插件id'
+version = '1.0.1'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+publishing {
+    publications {
+        maven(MavenPublication) {
+            //最终的插件id
+            artifactId = 'com.aispeech.oyf.buildsrc'
+            from components.java
+        }
+    }
+    //插件存储库
+    repositories {
+        maven {
+            // 生成的插件位置
+            url = uri('../repo')
+        }
+    }
+}
